@@ -1,0 +1,4 @@
+python_path=python
+train_path=Users/Kyle/miniconda2/envs/magenta/lib/python2.7/site-packages/magenta/models/music_vae/music_vae_train.py
+generate_path=Users/Kyle/Projects/CSCE482/magenta/magenta/models/music_vae/music_vae_generate.py
+note_sequence_path=⁨convert_dir_to_note_sequences

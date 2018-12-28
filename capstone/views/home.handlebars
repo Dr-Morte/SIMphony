@@ -1,0 +1,25 @@
+<h1>SIMphony</h1>
+<h2>Make music with A.I</h2>
+
+<object type="image/svg+xml" data="img/modern_robot.svg" id="robot">
+</object>
+
+<img src="img/8th_note.png" id="note_whole"></img>
+<img src="img/christmas.png"id="santa"></img>
+
+
+<form id="requestForm" name="requestForm">
+    <select name="checkpoint" id="checkpoint-selector" >
+        {{! checkpoints.json populated }}
+        {{#each checkpoints}}
+            <option value="{{path}}">{{name}}</option>
+        {{/each}}
+    </select>
+
+    <input type="submit" value="Play" class="button" id="play-button"/>
+    <button type="button" onclick="playAgain()" class="button" id="play-again">Play Again</button>
+    <button type="button" onclick="download()" class="button" id="download-button">Download</button>
+    <button type="button" onclick="pianoToggle()" class="button" id="mute-piano">Mute Piano</button>
+    <button type="button" onclick="bassToggle()" class="button" id="mute-bass">Mute Bass</button>
+    <button type="button" onclick="drumsToggle()" class="button" id="mute-drums">Mute Drums</button>
+</form>

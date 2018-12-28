@@ -1,0 +1,157 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@font-face {
+    font-family: "old-computer";
+    src: url(OldcomputerSt.ttf) format("truetype");
+}
+
+body
+{
+    height: 100vh;
+    text-align: center;
+    /*creates the radial background*/
+    background-image: linear-gradient($dark-gray, $medium-gray);
+    /*allows only one copy of said background*/
+    background-repeat: no-repeat;
+    /*centers the background (otherwise it would be at the top)*/
+    background-position: center;
+    /*makes sure the background covers the entire page*/
+    background-size: cover;
+}
+
+body *
+{
+    font-family: "old-computer", monospace;
+    position: absolute;
+}
+
+#robot
+{
+    min-width: 15vh;
+    max-width: 50vh;
+    transform: translate(-50%, 25vh);
+    -webkit-transform: translate(-50%, 25vh);
+}
+
+#requestForm
+{
+    right: 5vw;
+    left: 5vw;
+    bottom: 5vh;
+}
+
+#checkpoint-selector
+{
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+
+#play-button
+{
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+
+#play-again, #download-button
+{
+    bottom: 50px;
+    left: 0;
+    width: 0;
+    margin: 0;
+    display: none;
+}
+
+#mute-piano, #mute-bass, #mute-drums
+{
+    display:  none;
+    bottom: 0;
+    left: 100%;
+    width: 0;
+    margin: 0;
+}
+
+@include breakpoint(medium down)
+{
+    #checkpoint-selector
+    {
+        bottom: 150px;
+    }
+    #play-button, #play-again, #download-button
+    {
+        bottom: 100px;
+    }
+}
+
+h1, h2
+{
+    color: $light-gray;
+    width: 100%;
+    text-align: center;
+}
+
+h1
+{
+    top: 2vh;
+    font-size: 6vh;
+}
+
+h2
+{
+    top: 10vh;
+    font-size: 4vh;
+}
